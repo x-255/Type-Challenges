@@ -45,6 +45,6 @@ type cases = [
 ]
 
 // ============= Your Code Here =============
-type AppendToObject<T, U extends keyof any, V> = {
+type AppendToObject<T, U extends PropertyKey, V> = {
   [k in keyof T | U]: k extends keyof T ? T[k] : V
 }
